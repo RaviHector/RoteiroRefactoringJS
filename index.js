@@ -51,12 +51,6 @@ function gerarFaturaStr(fatura, pecas) {
   let totalFatura = 0;
   let creditos = 0;
   let faturaStr = `Fatura ${fatura.cliente}\n`;
-  const formato = new Intl.NumberFormat("pt-BR", {
-    style: "currency",
-    currency: "BRL",
-    minimumFractionDigits: 2,
-  }).format;
-
   for (let apre of fatura.apresentacoes) {
     const total = calcularTotalApresentacao(apre);
 
